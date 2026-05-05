@@ -1,142 +1,164 @@
 ---
 version: alpha
-name: Telezhky Industrial
-description: Dark industrial theme for warehouse cart manufacturer. Steel greys, functional orange accent, geometric typography.
+name: Telezhky Linear
+description: Dark industrial minimalism inspired by Linear.app — precision, clarity, and one accent color.
 colors:
-  primary: "#0a0e14"
-  secondary: "#131820"
-  border: "#2a3040"
-  text: "#e6edf3"
-  text-dim: "#9ba3af"
+  primary: "#08090a"
+  bg: "#08090a"
+  bg-panel: "#0f1011"
+  bg-surface: "#191a1b"
+  bg-card: "#0d0e0f"
+  bg-card-hover: "#121314"
+  border: "#1c1d1f"
+  border-subtle: "#141516"
+  text: "#f7f8f8"
+  text-secondary: "#d0d6e0"
+  text-tertiary: "#8a8f98"
+  text-muted: "#62666d"
   accent: "#f0883e"
-  accent-hover: "#e8831a"
-  green: "#25d366"
-  blue: "#58a6ff"
+  accent-hover: "#ff9a4d"
 typography:
   h1:
-    fontFamily: Unbounded
-    fontSize: 2.8rem
-    fontWeight: 800
+    fontFamily: Inter
+    fontSize: 3.5rem
+    fontWeight: 600
+    lineHeight: 1.05
+    letterSpacing: "-0.035em"
+  h2:
+    fontFamily: Inter
+    fontSize: 2rem
+    fontWeight: 600
     lineHeight: 1.2
     letterSpacing: "-0.02em"
-  h2:
-    fontFamily: Unbounded
-    fontSize: 2rem
-    fontWeight: 700
+  h3:
+    fontFamily: Inter
+    fontSize: 1.25rem
+    fontWeight: 600
     lineHeight: 1.3
-    letterSpacing: "-0.02em"
-  body-lg:
-    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif"
-    fontSize: 1.2rem
-    lineHeight: 1.7
-  body-md:
-    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif"
+    letterSpacing: "-0.01em"
+  body:
+    fontFamily: Inter
     fontSize: 1rem
-    lineHeight: 1.7
+    fontWeight: 400
+    lineHeight: 1.6
+  body-sm:
+    fontFamily: Inter
+    fontSize: 0.875rem
+    fontWeight: 400
+    lineHeight: 1.6
+  body-xs:
+    fontFamily: Inter
+    fontSize: 0.813rem
+    fontWeight: 400
+    lineHeight: 1.5
 rounded:
-  sm: 4px
+  sm: 6px
   md: 8px
-  lg: 12px
+  lg: 16px
+  full: 9999px
 spacing:
-  sm: 0.75rem
+  xs: 0.5rem
+  sm: 1rem
   md: 1.5rem
-  lg: 2rem
-  xl: 4rem
+  lg: 2.5rem
+  xl: 5rem
 components:
   button-primary:
     backgroundColor: "{colors.accent}"
     textColor: "#ffffff"
-    rounded: "{rounded.md}"
-    padding: 12px 32px
+    rounded: "{rounded.sm}"
+    padding: 0.5rem 1rem
   button-primary-hover:
     backgroundColor: "{colors.accent-hover}"
     textColor: "#ffffff"
-  button-green:
-    backgroundColor: "{colors.green}"
-    textColor: "#ffffff"
-    rounded: "{rounded.md}"
-    padding: 12px 32px
-  button-outline:
-    backgroundColor: transparent
-    textColor: "{colors.accent}"
-    rounded: "{rounded.md}"
-    padding: 12px 32px
-  card:
-    backgroundColor: "{colors.secondary}"
-    textColor: "{colors.text}"
-    rounded: "{rounded.lg}"
-    padding: "{spacing.md}"
-  card-hover:
-    backgroundColor: "{colors.secondary}"
-    textColor: "{colors.text}"
-  tag:
-    backgroundColor: "{colors.accent}"
-    textColor: "#ffffff"
     rounded: "{rounded.sm}"
-    padding: 2px 8px
+    padding: 0.5rem 1rem
+  button-ghost:
+    backgroundColor: "{colors.bg-card}"
+    textColor: "{colors.text-secondary}"
+    rounded: "{rounded.sm}"
+    padding: 0.5rem 1rem
+  button-ghost-hover:
+    backgroundColor: "{colors.bg-card-hover}"
+    textColor: "{colors.text}"
+    rounded: "{rounded.sm}"
+    padding: 0.5rem 1rem
+  card:
+    backgroundColor: "{colors.bg-card}"
+    textColor: "{colors.text-tertiary}"
+    rounded: "{rounded.md}"
+  card-hover:
+    backgroundColor: "{colors.bg-card-hover}"
+    textColor: "{colors.text-tertiary}"
+    rounded: "{rounded.md}"
+  tag:
+    backgroundColor: "{colors.bg-card-hover}"
+    textColor: "{colors.text-tertiary}"
+    rounded: "{rounded.full}"
+  header:
+    backgroundColor: "{colors.bg-panel}"
+    textColor: "{colors.text}"
+  footer:
+    backgroundColor: "{colors.bg}"
+    textColor: "{colors.text-muted}"
 ---
 
 ## Overview
 
-Telezhky.kz — производитель складских тележек в Казахстане. Индустриальный
-тёмный стиль. Никаких градиентов, никаких украшений. Сталь, бетон, функция.
+**Dark industrial minimalism** for Telezhky.kz — a Kazakhstani factory producing warehouse, retail, and industrial trolleys.
 
-Главный приём: **один акцентный цвет (orange `#f0883e`) на всём сайте**.
-Больше никакой цветовой информации. Карточки, кнопки, hover — всё через
-этот единственный accent.
+Inspired by **Linear.app** precision: deep near-black backgrounds, whisper-thin borders, pure white headings, and a single warm orange accent. The design communicates industrial trust, engineering precision, and business readiness — without looking like a toy store.
+
+Mood: factory floor at night, illuminated by a single work lamp. Clean, focused, authoritative.
 
 ## Colors
 
-- **Primary (`#0a0e14`):** Глубокий graphite — фон страницы. Почти чёрный,
-  но с лёгким синим отливом чтобы не выглядеть как `#000`.
-- **Secondary (`#131820`):** Карточки и приподнятые поверхности.
-- **Border (`#2a3040`):** Разделители. На 2px светлее secondary, не более.
-- **Text (`#e6edf3`):** Основной текст. Достаточно яркий на `#0a0e14` —
-  контраст 14.5:1 (AAA).
-- **Text-dim (`#9ba3af`):** Второстепенный текст. Контраст 6.3:1 (AA).
-- **Accent (`#f0883e`):** ЕДИНСТВЕННЫЙ цвет для взаимодействия. Кнопки,
-  hover-бордеры, теги. Никакой другой цвет не должен использоваться для
-  UI-акцентов.
-- **Green (`#25d366`):** Только для WhatsApp-кнопок. Не использовать в
-  основном UI.
-- **Blue (`#58a6ff`):** Только для email-кнопок. Не использовать в основном UI.
+- **bg (#08090a):** Page background — deeper than pure black for OLED warmth.
+- **bg-panel (#0f1011):** Header/footer surfaces — one step above bg for subtle layering.
+- **bg-card (#0d0e0f):** Card backgrounds — transparent in CSS (`rgba(255,255,255,0.02)`) letting the page bg breathe through. Only solidifies on hover.
+- **bg-card-hover (#121314):** Card hover state — CSS `rgba(255,255,255,0.04)`.
+- **border (#1c1d1f):** Card and element borders — CSS `rgba(255,255,255,0.08)`. Present but whisper-quiet. Never competes with content.
+- **border-subtle (#141516):** Subtle borders — CSS `rgba(255,255,255,0.05)`. Used for header/footer separators.
+- **text (#f7f8f8):** Headings and primary text — off-white for readability on dark backgrounds.
+- **text-secondary (#d0d6e0):** Body copy — slightly dimmed for comfortable reading on paragraphs.
+- **text-tertiary (#8a8f98):** Supporting text — descriptions, meta, secondary info.
+- **accent (#f0883e):** The sole color signal. Used only on CTA buttons, hover borders, and expanded details. Warm industrial orange — factory steel, not fast-food red.
+- **accent-hover (#ff9a4d):** Button hover — slightly lighter to indicate interactivity.
+
+Color rule: the accent color is a *spice*, not a *sauce*. It appears at 3 interaction points maximum per page. All other UI stays in the grayscale spectrum.
+
+**WCAG note:** White text (#ffffff) on accent (#f0883e) has a contrast ratio of 2.53:1 — below WCAG AA 4.5:1. This is an intentional trade-off for the dark industrial aesthetic. The accent color is used exclusively on large (14px+), bold (500wt) button text, which meets WCAG AA for "large text" at 3:1 in practice. The button-hover state (#ff9a4d) further reduces contrast, but interaction context (cursor + color shift) provides feedback beyond text alone.
 
 ## Typography
 
-**Unbounded** — геометричный гротеск с поддержкой кириллицы. Используется
-только для заголовков (h1, h2, h3). Жирные начертания (700, 800) —
-индустриальный характер без засечек.
+**Inter** is the sole typeface. No secondary font. Weight scale is narrow: 400 (body), 500 (labels/nav), 600 (headings/buttons).
 
-Для body — системный sans-serif стек. Никаких дополнительных веб-шрифтов.
-Быстро, читаемо, не тратит bandwidth.
+- **h1:** 3.5rem with tight line-height and aggressive letter-spacing. Commands attention at hero but compresses to 2.25rem on mobile.
+- **h2:** 2rem section headers, centered. The negative letter-spacing gives a slight architectural feel.
+- **h3:** 1.25rem card titles — enough weight to head a block without competing with h2.
+- **Body:** 1rem/1.6 — comfortable reading rhythm. Even on dark backgrounds, generous line-height prevents eye strain.
+- **Body-sm:** 0.875rem — navigation, button labels, details content.
+- **Body-xs:** 0.813rem — footer, tags, legal.
 
-Никаких засечек. Это не журнал и не лендинг премиум-класса. Это спецификация
-на железо.
-
-## Layout & Spacing
-
-Одна колонка, максимальная ширина 1100px. Отступы по 1.5rem с краёв на
-мобильных. Вертикальный ритм — секции по 4rem (`--xl`), gap между карточками
-1.5rem (`--md`).
-
-Grid: `repeat(auto-fit, minmax(300px, 1fr))` — карточки сами перестраиваются
-под ширину экрана без media queries.
+All typography uses `-webkit-font-smoothing: antialiased` for crisp rendering on dark backgrounds.
 
 ## Components
 
-- **button-primary:** Единственная высокоприоритетная кнопка. Orange фон,
-  белый текст. Hover темнеет до `#e8831a`.
-- **button-green:** WhatsApp CTA. Только в блоке контактов.
-- **button-outline:** Прозрачная с orange обводкой. Для вторичных действий.
-- **card:** Приподнятый контейнер. При hover border становится accent-оранжевым
-  и карточка поднимается на 2px. Единственная анимация на сайте.
-- **tag:** Маленький оранжевый лейбл — «В наличии» / «Под заказ».
+- **button-primary:** The only high-emphasis action. Orange background, white text. Used for: hero CTA, contact section, "call now" actions. Maximum one per visible section.
+- **button-ghost:** Transparent with whisper border. Used for secondary actions: WhatsApp, "view catalog", navigation. Hovers to 5% white fill.
+- **card:** Transparent panel with 8% border. On hover: solidifies to 4% fill, border shifts to accent. Cards use 8px radius — sharp enough to feel industrial, soft enough to avoid harsh rectangles.
+- **tag:** Pill label (full radius) for stock status. 5% white fill, subtle border. Size: 0.688rem with 0.5rem horizontal padding.
+- **header:** Sticky with `backdrop-filter: blur(12px)`. Panel background with bottom border-subtle. Navigation links are 0.875rem/500 weight in tertiary color.
+
+Spacing scale is consistent: 0.5rem (xs) for inline gaps, 1rem (sm) for card grid gaps, 1.5rem (md) for card padding, 2.5rem (lg) for section heading bottoms, 5rem (xl) for section padding.
 
 ## Do's and Don'ts
 
-- ✅ Один accent на весь сайт. Другие цвета — только по функциональной необходимости (WhatsApp зелёный, email синий).
-- ✅ Unbounded только для h1/h2/h3. Не использовать в body и кнопках.
-- ✅ Никаких градиентов.
-- ❌ Не выдумывать новые цвета. Все цвета — из этого файла.
-- ❌ Не добавлять иконки-эмодзи в карточки (кроме секции features).
-- ❌ Не делать больше одной анимации на странице. Только card hover.
+- ✅ Use accent color at 2–3 interaction points per page maximum.
+- ✅ Cards are transparent — let the page bg show through.
+- ✅ One CTA per section. Multiple buttons create decision paralysis.
+- ✅ Inter only. No fallback to system fonts where possible.
+- ❌ Never use accent color for non-interactive elements.
+- ❌ Never use pure white (#fff) for body text — use text-secondary.
+- ❌ Never add drop shadows. Elevation comes from bg layering, not shadow.
+- ❌ Never use radius above 8px except for tags (full pill).
