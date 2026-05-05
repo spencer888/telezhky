@@ -4,7 +4,7 @@ export interface Props {
   description: string;
   ogImage?: string;
 }
-const { title, description, ogImage } = Astro.props;
+const { title, description, ogImage = '/og-telezhky.jpg' } = Astro.props;
 const siteUrl = 'https://telezhky.kz';
 const ogUrl = ogImage ? new URL(ogImage, Astro.site).href : `${siteUrl}/favicon.svg`;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
