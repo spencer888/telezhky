@@ -98,6 +98,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
     .hero-image img { width: 100%; height: auto; max-height: 280px; object-fit: cover; border-radius: 0; border: none; opacity: 0.85; display: block; }
     @media (min-width: 769px) {
       .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; text-align: left; padding: 5rem 0; }
+      .hero .container { max-width: none; margin: 0; padding: 0; }
       .hero h1 { font-size: 3.5rem; line-height: 1.05; letter-spacing: -0.035em; margin: 0 0 1.25rem; }
       .hero p { font-size: 1.125rem; margin: 0 0 2rem; max-width: 560px; line-height: 1.7; }
       .hero .btn-group { justify-content: flex-start; }
