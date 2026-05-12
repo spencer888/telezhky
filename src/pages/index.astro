@@ -16,7 +16,10 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
     <div class="hero-image">
-      <img src="/og-telezhky.jpg" alt="Производство тележек в Казахстане" />
+      <picture>
+        <source srcset="/og-telezhky-mobile.jpg" media="(max-width: 640px)" />
+        <img src="/og-telezhky.jpg" alt="Производство тележек в Казахстане" width="1280" height="720" loading="eager" fetchpriority="high" />
+      </picture>
     </div>
   </section>
 
