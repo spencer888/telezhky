@@ -91,9 +91,29 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
     nav.mobile-open { display: flex !important; }
 
     /* —— Hero —— */
-    .hero { text-align: center; padding: clamp(1.5rem, 5vw, 2.5rem) 0 0; animation: fadeUp 0.6s ease-out; overflow: hidden; }
-    .hero h1 { font-size: clamp(1.75rem, 7vw, 2.25rem); line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 0.75rem; }
-    .hero p { font-size: clamp(0.875rem, 3.5vw, 1rem); color: var(--text-tertiary); margin: 0 0 1.25rem; line-height: 1.6; }
+    .hero {
+      text-align: center;
+      padding: clamp(2.25rem, 9vw, 3.25rem) 0 0;
+      animation: fadeUp 0.6s ease-out;
+      overflow: hidden;
+    }
+    .hero h1 {
+      font-size: clamp(1.55rem, 6.2vw, 2.2rem);
+      line-height: 1.16;
+      letter-spacing: -0.02em;
+      max-width: min(92vw, 680px);
+      margin: 0 auto 0.75rem;
+      text-wrap: balance;
+      overflow-wrap: normal;
+      hyphens: none;
+    }
+    .hero p {
+      font-size: clamp(0.875rem, 3.4vw, 1rem);
+      color: var(--text-tertiary);
+      max-width: min(90vw, 540px);
+      margin: 0 auto 1.25rem;
+      line-height: 1.6;
+    }
     .hero .btn-group { margin-bottom: clamp(1rem, 4vw, 1.75rem); }
     .hero-image {
       width: min(92vw, clamp(240px, 78vw, 520px));
@@ -125,7 +145,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
     @media (min-width: 769px) {
       .hero { display: flex; align-items: center; gap: clamp(2rem, 5vw, 4rem); text-align: left; padding: clamp(3rem, 7vw, 5rem) 2rem; max-width: 1180px; margin: 0 auto; }
       .hero .container { flex: 1 1 0; max-width: none; margin: 0; padding: 0; min-width: 0; }
-      .hero h1 { font-size: clamp(2.5rem, 4.2vw, 4rem); line-height: 1.08; letter-spacing: -0.03em; margin: 0 0 1rem; }
+      .hero h1 { font-size: clamp(2.5rem, 4.2vw, 4rem); line-height: 1.08; letter-spacing: -0.03em; max-width: 620px; margin: 0 0 1rem; }
       .hero p { font-size: clamp(1rem, 1.3vw, 1.125rem); margin: 0 0 1.5rem; max-width: 520px; }
       .hero .btn-group { justify-content: flex-start; margin-bottom: 0; }
       .hero-image { flex: 0 1 clamp(360px, 44vw, 560px); width: clamp(360px, 44vw, 560px); margin: 0; min-width: 0; }
@@ -216,6 +236,9 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
       .container { padding: 0 1.25rem; }
       .card { padding: 1.25rem; }
       .grid { grid-template-columns: 1fr; }
+      .hero { padding-top: clamp(2.75rem, 11vw, 4rem); }
+      .hero h1 { max-width: 94vw; }
+      .hero p { max-width: 92vw; }
       .hero-page { padding: 2rem 0 1rem; }
       .hero-image { width: min(94vw, clamp(260px, 84vw, 480px)); }
       .hero-image img { max-height: clamp(170px, 54vw, 280px); }
@@ -227,6 +250,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
     @media (max-width: 400px) {
       h1 { font-size: 1.625rem; }
       h2 { font-size: 1.35rem; }
+      .hero { padding-top: 3rem; }
+      .hero h1 { font-size: clamp(1.45rem, 7.2vw, 1.75rem); max-width: 94vw; }
       .hero p { font-size: 0.875rem; }
       .hero-image { width: min(92vw, clamp(220px, 82vw, 340px)); }
       .hero-image img { max-height: clamp(150px, 52vw, 210px); }
